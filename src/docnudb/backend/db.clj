@@ -6,10 +6,10 @@
         `(do ~@body)
         (= b :escape)
         `(or ~v
-             (elet ~more-bindings ~@body))
+             (let ~more-bindings ~@body))
         :else
-        `(let [~b ~v]
-           (elet ~more-bindings ~@body))))
+        `(clojure.core/let [~b ~v]
+           (let ~more-bindings ~@body))))
 
 #_(let [x (determine-x)]
     (if (something-wrong-with x)
@@ -465,7 +465,7 @@
 (list-docrefs "F-J-SPM-013" "C")
 
 (comment
-  (remove-issue "F-J-SPM-013" "C" 0))
+  (remove-issue "F-J-SPM-013" "C"))
 
 (comment
   (list-docrefs "F-J-SPM-013" "C")

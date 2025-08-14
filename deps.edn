@@ -1,0 +1,4 @@
+{:paths ["src/docnudb/backend" "src/docnudb/frontend" "resources" "target"]
+ :deps {datalevin/datalevin {:mvn/version "0.9.22"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.20"}
+        no.cjohansen/replicant {:mvn/version "2025.06.21"}}}
